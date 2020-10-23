@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sudoku.NorvigSolver
 {
-    class Class1
+    public static class LocalExtensions
     {
+        public static string CenterString(this string stringToCenter, int totalLength)
+        {
+            return stringToCenter.PadLeft(((totalLength - stringToCenter.Length) / 2)
+                                          + stringToCenter.Length)
+                .PadRight(totalLength);
+        }
     }
 }
